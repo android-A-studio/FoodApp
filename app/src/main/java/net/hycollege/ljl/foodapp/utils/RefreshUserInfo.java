@@ -38,6 +38,7 @@ public class RefreshUserInfo implements InternetData.DataListener {
                 try {
                     obj.put("phonenum", isSuccess.get(0).getPhonenum());
                     obj.put("password", isSuccess.get(0).getPassword());
+                    //用户密码进行网络请求匹配
                     InternetData.getRequest(Yieid.userLogin, obj.toString(), this);
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -58,8 +58,9 @@ public class getFragmentMe extends BaseFragment {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            //此处将progressBar设置为可见.
+            //判断登陆状态
             if (refreshUserInfo.getLoginState()) {
+                //圆形滚动条
                 mProgressBarCircularIndeterminates.setVisibility(View.VISIBLE);
             } else {
                 viewByIdSuccess.setVisibility(View.GONE);
@@ -147,12 +148,15 @@ public class getFragmentMe extends BaseFragment {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //执行动画跳转到登陆页面
                 Explode explode = new Explode();
                 explode.setDuration(500);
                 getActivity().getWindow().setExitTransition(explode);
                 getActivity().getWindow().setEnterTransition(explode);
                 ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity());
+                //准备加载登陆页面
                 Intent i2 = new Intent(v.getContext(), AActivityOne.class);
+                //跳转到登陆页面
                 startActivity(i2, oc2.toBundle());
             }
         });
@@ -160,6 +164,9 @@ public class getFragmentMe extends BaseFragment {
         return view;
     }
 
+    /**
+     * 这个方法执行异步,用来加载登陆用户
+     */
     @Override
     public void initData() {
         new MyAsyncTask().execute();
