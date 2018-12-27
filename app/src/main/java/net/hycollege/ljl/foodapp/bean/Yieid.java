@@ -11,7 +11,7 @@ import android.support.v4.app.ActivityOptionsCompat;
 import net.hycollege.ljl.foodapp.view.RegistTransition.AActivityOne;
 
 public class Yieid {
-    public static String userAplipay="http://47.106.170.112:8080/alipay_web/userAplipay";
+    public static String userAplipay="http://47.106.170.112:8080/alipay_web/userAplipay";//支付宝支付链接
     private static String urls="http://47.106.170.112:8080/FoodWebs";
     public static String foodMenu=urls+"/foodMenu";//远程服务器链接--菜单列表
     public static String urlregist = urls+"/register";//远程服务器链接--注册

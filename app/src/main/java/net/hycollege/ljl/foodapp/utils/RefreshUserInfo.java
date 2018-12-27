@@ -13,7 +13,7 @@ import org.json.JSONObject;
 import java.util.List;
 
 public class RefreshUserInfo implements InternetData.DataListener {
-    boolean mBoolean=false;
+    boolean mBoolean=true;
     public RefreshUserInfo(Context context){
         if (userInfoModelImp == null) {
             userInfoModelImp = new UserInfoModel(context);
@@ -26,12 +26,13 @@ public class RefreshUserInfo implements InternetData.DataListener {
      */
     List<User> search=null;
     public boolean getLoginState(){
-        search=userInfoModelImp.QueryAllinfofromData();
-        ////查询本地数据库如果没有记录,就插入数据
-        if(search.size()>0){
+//        search=userInfoModelImp.QueryAllinfofromData();
+//        ////查询本地数据库如果没有记录,就插入数据
+//        if(search.size()>0){
            isSuccess= userInfoModelImp.getSearchfromState("success");
             if (isSuccess.size()==0){
-               return false;
+                mBoolean=false;
+               return mBoolean;
             }else{
                 //进行数据更新
                 JSONObject obj = new JSONObject();
@@ -45,8 +46,8 @@ public class RefreshUserInfo implements InternetData.DataListener {
                 }
                 return mBoolean;
             }
-        }
-        return false;
+//        }
+//        return false;
     }
     public void unlogin(){
         search=userInfoModelImp.QueryAllinfofromData();
