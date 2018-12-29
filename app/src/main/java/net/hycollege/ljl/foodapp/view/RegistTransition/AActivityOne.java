@@ -102,7 +102,7 @@ public class AActivityOne extends AppCompatActivity implements InternetData.Data
                         JSONObject obj = new JSONObject();
                         obj.put("phonenum", phonenums.trim());
                         obj.put("password", passwords);
-
+                        //
                         InternetData.getRequest(Yieid.userLogin, obj.toString(), AActivityOne.this);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -115,6 +115,7 @@ public class AActivityOne extends AppCompatActivity implements InternetData.Data
 
             }
         });
+        //注册
         fab.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
@@ -144,7 +145,6 @@ public class AActivityOne extends AppCompatActivity implements InternetData.Data
 
     /**
      * 得到服务器返回数据
-     *
      * @param data
      */
     @Override

@@ -32,8 +32,7 @@
         <activity android:name=".view.OrderPages"/>
         <activity android:name=".view.RegistTransition.AActivityOne"
             />
-        <activity android:name=".view.RegistTransition.AActivityThree"
-            />
+
         <activity android:name=".view.RegistTransition.AActivityTwo"
             android:theme="@style/Translucent"/>
         <activity android:name=".view.FindUserBack"
