@@ -79,6 +79,7 @@ public class OrderPages extends AppCompatActivity implements InternetData.DataLi
         paybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //判断是否登陆状态
                 if (refreshUserInfo.getLoginState()) {
                     payV2();
                 } else {

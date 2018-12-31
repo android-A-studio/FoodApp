@@ -32,8 +32,7 @@ public class InternetData {
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("POST");
                     conn.setReadTimeout(5000);
-
-                   // conn.setRequestProperty("Content-Type","text/json;charset=gbk");
+                    conn.setRequestProperty("Content-Type","text/json;charset=gbk");
                     conn.connect();
                     if(data!=null){
                         OutputStream out = conn.getOutputStream();

@@ -170,7 +170,6 @@ public class getFragmentMe extends BaseFragment {
     @Override
     public void initData() {
         new MyAsyncTask().execute();
-
     }
 
     @Override
@@ -181,7 +180,9 @@ public class getFragmentMe extends BaseFragment {
                 Log.e("exit", "exit");
                 if (refreshUserInfo.getLoginState() == true) {
                     refreshUserInfo.unlogin();
+                    //成功页面控件隐藏
                     viewByIdSuccess.setVisibility(View.GONE);
+                    //不成功页面控件显示
                     viewByIdNoSuccess.setVisibility(View.VISIBLE);
                 }
             }

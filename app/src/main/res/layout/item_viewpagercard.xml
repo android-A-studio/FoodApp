@@ -108,7 +108,7 @@
             android:focusable="true"
             android:scaleType="centerInside"
             android:src="@mipmap/button_set" />
-
+        <!--悬浮按钮-->
         <com.gc.materialdesign.views.ButtonFloat
             android:id="@+id/buttonFloat"
             android:layout_width="wrap_content"

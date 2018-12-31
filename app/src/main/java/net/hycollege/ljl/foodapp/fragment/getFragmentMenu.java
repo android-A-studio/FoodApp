@@ -110,7 +110,7 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
         gotoRunRetFragment();
         mProgressBarCircularIndeterminate.setVisibility(View.VISIBLE);
         //标题更多 按钮监听
-        moreTextView.setOnClickListener(new View.OnClickListener() {
+      /*  moreTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //隐藏简约列表显示list列表
@@ -121,7 +121,7 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
                 moreTextView.setVisibility(View.GONE);
                 moreTextList.setVisibility(View.VISIBLE);
             }
-        });
+        });*/
         //标题精简 按钮监听
         moreTextList.setOnClickListener(new View.OnClickListener() {
             @Override
