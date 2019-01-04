@@ -19,7 +19,14 @@
     <color name="wm_common_text_hint">#ff999999</color>
     <color name="milk_white">#F5F5F5</color>
     <color name="font_light">#464e76</color>
+    <!--底部字体颜色-->
+    <color name="tab_text_selector">#E64A19</color>
+    <color name="btn_basic_degree_bg">#99292F</color>
     <color name="colordiary">#1296ab</color>
+    <!--所有带点击效果的颜色-->
+    <color name="click_background_normals">#ffffff</color>
+    <color name="click_background_presss">#cccccc</color>
+
     <color name="wm_common_text_main">#ff333333</color>
     <color name="colorlive">#1afa29</color>
     <color name="colorstudy">#d81e06</color>

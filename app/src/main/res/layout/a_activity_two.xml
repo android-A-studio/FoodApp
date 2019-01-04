@@ -66,11 +66,13 @@
                         android:textColorHint="#f0f7f4"
                         android:theme="@style/TextLabel">
                         <AutoCompleteTextView
-                            android:id="@+id/username"
+                            android:id="@+id/phonenum"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="@string/prompt_username"
+                            android:hint="@string/prompt_phone"
+
                             android:inputType="textPersonName"
                             android:maxLines="1"
                             android:paddingBottom="8dp"
@@ -91,11 +93,11 @@
                         android:textColorHint="#f0f7f4"
                         android:theme="@style/TextLabel">
                         <AutoCompleteTextView
-                            android:id="@+id/password"
+                            android:id="@+id/username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="@string/prompt_password"
+                            android:hint="@string/prompt_username"
                             android:inputType="textPassword"
                             android:maxLines="1"
                             android:paddingBottom="8dp"
@@ -118,11 +120,11 @@
                         android:textColorHint="#f0f7f4"
                         android:theme="@style/TextLabel">
                         <AutoCompleteTextView
-                            android:id="@+id/phonenum"
+                            android:id="@+id/password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
-                            android:hint="@string/prompt_phone"
+                            android:hint="@string/prompt_password"
                             android:inputType="phone"
                             android:maxLines="1"
                             android:paddingBottom="8dp"

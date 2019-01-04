@@ -15,6 +15,7 @@
         android:theme="@style/Zql_theme_toolbar"
         app:layout_scrollFlags="scroll|enterAlways"
         app:title="菜谱展示">
+        <!--android:text="更多"-->
         <TextView
             android:id="@+id/title_toolbar_more"
             android:layout_width="wrap_content"

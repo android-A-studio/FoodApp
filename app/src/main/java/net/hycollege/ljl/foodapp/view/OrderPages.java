@@ -16,7 +16,10 @@ import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.transition.Explode;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
@@ -122,11 +125,20 @@ public class OrderPages extends AppCompatActivity implements InternetData.DataLi
     }
 
     private static void showAlert(Context ctx, String info, DialogInterface.OnDismissListener onDismiss) {
-        new AlertDialog.Builder(ctx)
-                .setMessage(info)
-                .setPositiveButton("确定", null)
-                .setOnDismissListener(onDismiss)
-                .show();
+        LayoutInflater layoutInflater = LayoutInflater.from(ctx);
+        AlertDialog.Builder builder= new AlertDialog.Builder(ctx);
+        View centerview = layoutInflater.inflate(R.layout.activity_set_editpassworddialog, null);
+        TextView textView=centerview.findViewById(R.id.messages);
+        textView.setText(info);
+        final Button button=centerview.findViewById(R.id.payfinisbtn);
+        final AlertDialog alertDialog=builder.setView(centerview).create();
+        alertDialog.show();
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                alertDialog.dismiss();
+            }
+        });
     }
 
     String orderInfo = "";
@@ -176,11 +188,13 @@ public class OrderPages extends AppCompatActivity implements InternetData.DataLi
                     String resultStatus = payResult.getResultStatus();
                     // 判断resultStatus 为9000则代表支付成功
                     if (TextUtils.equals(resultStatus, "9000")) {
+                        Log.w("result",payResult+"");
+                        showAlert(OrderPages.this, "支付成功: 谢谢品尝\n ^_^" /*+ payResult*/);
                         // 该笔订单是否真实支付成功，需要依赖服务端的异步通知。
-                        showAlert(OrderPages.this, "支付成功: " + payResult);
                     } else {
                         // 该笔订单真实的支付结果，需要依赖服务端的异步通知。
-                        showAlert(OrderPages.this, "支付失败: " + payResult);
+                        Log.w("result",payResult+"");
+                        showAlert(OrderPages.this, "支付失败: 未完成支付\n请到订单页面完成支付");
                     }
                     break;
                 }

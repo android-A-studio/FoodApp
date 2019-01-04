@@ -1,6 +1,6 @@
 <resources>
     <string name="prompt_phone">请输入手机号</string>
-    <string name="prompt_password">请输入密码</string>
+    <string name="prompt_password">请输入密  码</string>
     <string name="prompt_username">请输入用户名</string>
     <string name="app_name">FoodApp</string>
     <string name="sharedImageView">sharedimageview</string>
@@ -12,8 +12,8 @@
     <string name="forgot_your_password">忘记登录密码 ?</string>
     <string name="go">登 录</string>
     <string name="repeat_password">Repeat Password</string>
-    <string name="next">NEXT</string>
-    <string name="register">REGISTER</string>
+    <string name="next">确定</string>
+    <string name="register">注 册</string>
     <string name="findpwd">找回密码页面</string>
     <string name="detailedpage">详细界面</string>
     <string name="userlogin">用户登陆</string>
