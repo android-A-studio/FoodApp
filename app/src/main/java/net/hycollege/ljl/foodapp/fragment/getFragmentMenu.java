@@ -22,9 +22,7 @@ import net.hycollege.ljl.foodapp.bean.Yieid;
 import net.hycollege.ljl.foodapp.utils.InternetData;
 import net.hycollege.ljl.foodapp.utils.ScaleTransformer0;
 import net.hycollege.ljl.foodapp.view.ViewPagerCardAdapter;
-import net.hycollege.ljl.foodapp.view.ViewPagerListAdapter;
 
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -36,7 +34,6 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
     ViewPager viewPager, viewPagerlist;
     public List<FoodBean> foodBean = null;
     ViewPagerCardAdapter adapter = null;
-    ViewPagerListAdapter listAdapter = null;
     ProgressBarCircularIndeterminate mProgressBarCircularIndeterminate = null;
     //精简和更多列表
     TextView moreTextView, moreTextList;
@@ -85,7 +82,6 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
         viewPagerlist = view.findViewById(R.id.viewpager_list);
         mProgressBarCircularIndeterminate = view.findViewById(R.id.progressBarCircularIndetermininate);
         //请求网络数据
-        listAdapter = new ViewPagerListAdapter(getActivity());
         //设置viewPager之间的间距
         viewPager.setPageMargin((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources().getDisplayMetrics()));
         //给viewPager添加悬浮效果
