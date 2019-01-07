@@ -13,7 +13,7 @@
     <string name="go">登 录</string>
     <string name="repeat_password">Repeat Password</string>
     <string name="next">确定</string>
-    <string name="register">注 册</string>
+    <string name="register">REGISTER</string>
     <string name="findpwd">找回密码页面</string>
     <string name="detailedpage">详细界面</string>
     <string name="userlogin">用户登陆</string>
