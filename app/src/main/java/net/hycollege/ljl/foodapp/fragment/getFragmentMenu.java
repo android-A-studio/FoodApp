@@ -77,9 +77,7 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
     public View initView(LayoutInflater inflater, ViewGroup container) {
         view = View.inflate(context, R.layout.fragmentmenu, null);
         moreTextView = view.findViewById(R.id.title_toolbar_more);
-        moreTextList = view.findViewById(R.id.title_toolbar_list);
         viewPager = view.findViewById(R.id.viewpager_main);
-        viewPagerlist = view.findViewById(R.id.viewpager_list);
         mProgressBarCircularIndeterminate = view.findViewById(R.id.progressBarCircularIndetermininate);
         //请求网络数据
         //设置viewPager之间的间距
@@ -105,17 +103,7 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
     public void initEvent() {
         gotoRunRetFragment();
         mProgressBarCircularIndeterminate.setVisibility(View.VISIBLE);
-        //标题精简 按钮监听
-        moreTextList.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //隐藏list列表显示简约列表
-                viewPagerlist.setVisibility(View.GONE);
-                viewPager.setVisibility(View.VISIBLE);
-                moreTextList.setVisibility(View.GONE);
-                moreTextView.setVisibility(View.VISIBLE);
-            }
-        });
+
         if (foodBean.size() == 0) {
 
             InternetData.getRequest(Yieid.foodMenu, null, this);
