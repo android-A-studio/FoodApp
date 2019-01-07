@@ -67,13 +67,11 @@
                         android:theme="@style/TextLabel">
                         <AutoCompleteTextView
                             android:id="@+id/phonenum"
-
+                            android:inputType="phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="@string/prompt_phone"
-                            android:inputType="textPassword"
-
                             android:maxLines="1"
                             android:paddingBottom="8dp"
                             android:singleLine="true"
@@ -125,7 +123,8 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="@string/prompt_password"
-                            android:inputType="phone"
+
+                            android:inputType="textPassword"
                             android:maxLines="1"
                             android:paddingBottom="8dp"
                             android:singleLine="true"
