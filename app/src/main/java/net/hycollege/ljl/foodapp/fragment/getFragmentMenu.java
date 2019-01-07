@@ -86,7 +86,7 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
         viewPager.setPageMargin((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 24, getResources().getDisplayMetrics()));
         //给viewPager添加悬浮效果
         viewPager.setPageTransformer(false, new ScaleTransformer0(getActivity()));
-        //实例化更多列表
+        //实例化卡片列表
         adapter = new ViewPagerCardAdapter(getActivity(), foodBean);
         return view;
     }
@@ -105,19 +105,6 @@ public class getFragmentMenu extends BaseFragment implements View.OnClickListene
     public void initEvent() {
         gotoRunRetFragment();
         mProgressBarCircularIndeterminate.setVisibility(View.VISIBLE);
-        //标题更多 按钮监听
-        moreTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                //隐藏简约列表显示list列表
-//                viewPagerlist.setAdapter(listAdapter);
-//                listAdapter.notifyDataSetChanged();
-//                viewPager.setVisibility(View.GONE);
-//                viewPagerlist.setVisibility(View.VISIBLE);
-//                moreTextView.setVisibility(View.GONE);
-//                moreTextList.setVisibility(View.VISIBLE);
-            }
-        });
         //标题精简 按钮监听
         moreTextList.setOnClickListener(new View.OnClickListener() {
             @Override

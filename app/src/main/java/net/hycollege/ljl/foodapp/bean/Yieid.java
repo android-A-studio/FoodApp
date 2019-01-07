@@ -28,7 +28,6 @@ public class Yieid {
         //动画实现
         Explode explode = new Explode();
                 explode.setDuration(500);
-
                 activity.setExitTransition(explode);
                 activity.setEnterTransition(explode);
                 ActivityOptionsCompat oc2 = ActivityOptionsCompat.makeSceneTransitionAnimation(activity.getActivity());

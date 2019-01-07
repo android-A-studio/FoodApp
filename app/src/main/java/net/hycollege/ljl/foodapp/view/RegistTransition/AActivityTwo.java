@@ -26,6 +26,7 @@ import net.hycollege.ljl.foodapp.R;
 import net.hycollege.ljl.foodapp.bean.Yieid;
 import net.hycollege.ljl.foodapp.utils.InternetData;
 import net.hycollege.ljl.foodapp.utils.PasswordTool;
+import net.hycollege.ljl.foodapp.utils.SnackbarUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -236,7 +237,8 @@ public class AActivityTwo extends AppCompatActivity implements View.OnClickListe
                 JSONObject jsonObject;
                 switch (msg.what) {
                     case register:
-                        Toast.makeText(AActivityTwo.this, "接受的数据" + msg.obj, Toast.LENGTH_SHORT).show();
+                       /* Toast.makeText(AActivityTwo.this, "注册成功", Toast.LENGTH_SHORT).show();*/
+                        SnackbarUtils.Short(gobutton,"注册成功").leftAndRightDrawable(R.mipmap.i9,R.mipmap.i11).show();
                         break;
                     case isUserExist:
                         jsonObject = new JSONObject(String.valueOf(msg.obj));
