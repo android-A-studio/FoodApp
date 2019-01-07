@@ -72,8 +72,8 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="@string/prompt_phone"
+                            android:inputType="textPassword"
 
-                            android:inputType="textPersonName"
                             android:maxLines="1"
                             android:paddingBottom="8dp"
                             android:singleLine="true"
@@ -98,7 +98,7 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:hint="@string/prompt_username"
-                            android:inputType="textPassword"
+                            android:inputType="textPersonName"
                             android:maxLines="1"
                             android:paddingBottom="8dp"
                             android:singleLine="true"
